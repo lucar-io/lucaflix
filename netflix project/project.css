@@ -1,0 +1,85 @@
+body{
+	font-family: arial;
+	background-repeat: no-repeat;
+	background-position: right top;
+	margin-right: 200px;
+	background-attachment: fixed;
+	text-align: right;
+    background-image:url("img/moon3.jpg") , linear-gradient(to right, rgba(9, 1, 128, 0.63), rgba(61, 255, 220, 0.49), #00dbef,rgb(3,60,134));
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.column{
+    float: left;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000000;
+    overflow: hidden;
+}
+
+.row{
+    width: 68px;
+    height: 25px;
+    border: 1px solid #000000;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+            'header header header header header header'
+            'menu menu menu right right right'
+            'footer footer footer footer footer footer';
+    grid-gap: 1px;
+    background-color: #2196F3;
+    padding: 1px;
+    }
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 1px 1px;
+}
+.box {
+    width: 100%;
+    height:100%;
+}
+
+.boxx {
+    width: 20%;
+    outline: 1px solid;
+    float: left;
+}

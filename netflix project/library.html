@@ -1,0 +1,758 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Movies!</title>
+<link href="css/project.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+      body {
+      font-family: Arial, Helvetica, sans-serif;
+      }
+      .box {
+      width: 100%;
+      height:100%;
+      }
+      .boxx {
+      width: 20%;
+      outline: 1px solid;
+      float: left;
+      }
+      .item1 { grid-area: header; }
+      .item2 { grid-area: menu; }
+      .item4 { grid-area: right; }
+      .item5 { grid-area: footer; }
+      .grid-container {
+      display: grid;
+      grid-template-areas:
+      'header header header header header header'
+      'menu menu menu right right right'
+      'footer footer footer footer footer footer';
+      grid-gap: 1px;
+      background-color: #2196F3;
+      padding: 1px;
+      }
+      .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 1px 1px;
+      }
+      /*watch button*/
+      button {
+      background-color: #3aa0b0;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .animate {
+      -webkit-animation: animatezoom 1s;
+      animation: animatezoom 1s
+      }
+      .container {
+      padding: 16px; 
+      }
+      .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.7);
+      padding-top: 25px;
+      }
+      .modal-content {
+      background-color: black;
+      margin: auto auto; 
+      border: 1px solid #888;
+      width: 80%;
+      }
+      .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+      }
+      .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #40b3b3;
+      }
+   </style>
+   <script>
+      function showHide(idDiv) {
+  		var DivToShow =idDiv;
+			if(DivToShow.style.display=='none') {
+    			DivToShow.style.display='block'; 
+    		}
+  			else {
+   				DivToShow.style.display='none';
+   			}
+   		}
+   </script>
+<body>
+	 <ul> <li><a href="library.html">Movies!</a></li>
+	   	 <li><a href="tvshows.html">Tv-Shows!</a></li>
+	   	 <li><a href="books.html">Books!</a></li>
+         <li style="float: right;"><a href="index.html">Home</a></li>
+     </ul>
+	<h1 style="text-align: center;">Movies!</h1><hr>
+	<div>
+	  <div style="text-align: center;">
+	    <p><font size="5">Here's a list of my favorites movies that i definitely recommend. I included a description of each movie! But no worries there's no spoilers ;)
+            Enjoy!
+            <hr></font>
+    </div>
+</div>
+    <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_fightclub.jpg" height="auto" width="175px"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.8/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">96%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="id01" class="modal" >
+                     <form class="modal-content animate" style="width: 40%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/qtRKdVHc-cE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(kilo)">Description</button>
+                           </div>
+                           <div id="kilo" style="display:none;text-align: left;padding: 15px">
+                              A depressed man (Edward Norton) suffering from insomnia meets a strange soap salesman named Tyler Durden (Brad Pitt) and soon finds himself living in his squalid house after his perfect apartment is destroyed. The two bored men form an underground club with strict rules and fight other men who are fed up with their mundane lives. Their perfect partnership frays when Marla (Helena Bonham Carter), a fellow support group crasher, attracts Tyler's attention.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_memento.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.4/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">94%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('memento').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="memento" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/0vS0E9bBSL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_memento)">Description</button>
+                           </div>
+                           <div id="_memento" style="display:none;text-align: left;padding: 15px">
+                              Leonard (Guy Pearce) is tracking down the man who raped and murdered his wife. The difficulty, however, of locating his wife's killer is compounded by the fact that he suffers from a rare, untreatable form of memory loss. Although he can recall details of life before his accident, Leonard cannot remember what happened fifteen minutes ago, where he's going, or why.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('memento').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_requiem.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.3/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">93%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('requiem').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="requiem" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/QBwzN4v1vA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_requiem)">Description</button>
+                           </div>
+                           <div id="_requiem" style="display:none;text-align: left;padding: 15px">
+                              Imaginatively evoking the inner landscape of human beings longing to connect, to love and feel loved, the film is a parable of happiness gloriously found and tragically lost. "Requiem for a Dream" tells parallel stories that are linked by the relationship between the lonely, widowed Sara Goldfarb and her sweet but aimless son, Harry. The plump Sara, galvanized by the prospect of appearing on a TV game show, has started on a dangerous diet regimen to beautify herself for a national audience.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('requiem').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_matrix.jepg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.7/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">87%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('matrix').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="matrix" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/m8e-FF8MsqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_matrix)">Description</button>
+                           </div>
+                           <div id="_matrix" style="display:none;text-align: left;padding: 15px">
+                              Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent secret agents. It is a truth that could cost Neo something more precious than his life.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('matrix').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_island.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.1/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">76%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('island').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="island" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/5iaYLCiq5RM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_island)">Description</button>
+                           </div>
+                           <div id="_island" style="display:none;text-align: left;padding: 15px">
+                              The implausible escape of a brilliant murderess brings U.S. Marshal Teddy Daniels (Leonardo DiCaprio) and his new partner (Mark Ruffalo) to Ashecliffe Hospital, a fortress-like insane asylum located on a remote, windswept island. The woman appears to have vanished from a locked room, and there are hints of terrible deeds committed within the hospital walls. As the investigation deepens, Teddy realizes he will have to confront his own dark fears if he hopes to make it off the island alive.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('island').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_nacho.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 5.7/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">54%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('nacho').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="nacho" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/ElVSw6xpQ70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_nacho)">Description</button>
+                           </div>
+                           <div id="_nacho" style="display:none;text-align: left;padding: 15px">
+                              Ignacio (Jack Black), or Nacho to his friends, works as a cook in the Mexican monastery where he grew up. The monastery is home to a host of orphans whom Nacho cares for deeply, but there is not much money to feed them properly. Nacho decides to raise money for the children by moonlighting as a Lucha Libre wrestler with his partner Esqueleto (Héctor Jiménez), but since the church forbids Lucha, Nacho must disguise his identity.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('nacho').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_dumb.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 7.3/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">84%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('dumb').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="dumb" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/l13yPhimE3o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_dumb)">Description</button>
+                           </div>
+                           <div id="_dumb" style="display:none;text-align: left;padding: 15px">
+                              Imbecilic best friends Lloyd Christmas (Jim Carrey) and Harry Dunne (Jeff Daniels) stumble across a suitcase full of money left behind in Harry's car by Mary Swanson (Lauren Holly), who was on her way to the airport. The pair decide to go to Aspen, Colo., to return the money, unaware that it is connected to a kidnapping. As Harry and Lloyd -- who has fallen in love with Mary -- are pursued across the country by hired killers and police, they find both their friendship and their brains tested.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('dumb').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_mrnobody.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 7.8/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">76%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('mrnobody').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="mrnobody" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/mpi0qsp3v_w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_mrnobody)">Description</button>
+                           </div>
+                           <div id="_mrnobody" style="display:none;text-align: left;padding: 15px">
+                              In 2092 the last mortal human (Jared Leto) on Earth reflects on his long past and thinks about the lives he might have led.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('mrnobody').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_spirited.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.6/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">97%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('spirited').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="spirited" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/ByXuk9QqQkk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_spirited)">Description</button>
+                           </div>
+                           <div id="_spirited" style="display:none;text-align: left;padding: 15px">
+                              In this animated feature by noted Japanese director Hayao Miyazaki, 10-year-old Chihiro (Rumi Hiiragi) and her parents (Takashi Naitô, Yasuko Sawaguchi) stumble upon a seemingly abandoned amusement park. After her mother and father are turned into giant pigs, Chihiro meets the mysterious Haku (Miyu Irino), who explains that the park is a resort for supernatural beings who need a break from their time spent in the earthly realm, and that she must work there to free herself and her parents.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('spirited').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_truman.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.1/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">94%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('truman').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="truman" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/loTIzXAS7v4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_truman)">Description</button>
+                           </div>
+                           <div id="_truman" style="display:none;text-align: left;padding: 15px">
+                              He doesn't know it, but everything in Truman Burbank's (Jim Carrey) life is part of a massive TV set. Executive producer Christof (Ed Harris) orchestrates "The Truman Show," a live broadcast of Truman's every move captured by hidden cameras. Cristof tries to control Truman's mind, even removing his true love, Sylvia (Natascha McElhone), from the show and replacing her with Meryl (Laura Linney). As Truman gradually discovers the truth, however, he must decide whether to act on it.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('truman').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_memyselfandiren.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 6.6/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">57%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('iren').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="iren" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/ssx_riw1Y9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_iren)">Description</button>
+                           </div>
+                           <div id="_iren" style="display:none;text-align: left;padding: 15px">
+                              Meet Charlie Baileygates, a 17-year veteran of the Rhode Island police force. Charlie is mild-mannered, hard-working, always helpful, and a devoted and loving father to three sons. Unfortunately, Charlie has Split Personality Disorder, and when he runs out of his medication ... Meet Hank Baileygates (Jim Carrey), Charlie's hyper-aggressive alter-ego. Hank's got a filthy mouth, drinks like a fish, breaks skulls and loves dirty, dirty sex.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('iren').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_yesman.jepg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 6.8/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">66%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('yesman').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="yesman" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/M3ar1tBj_Zk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_yesman)">Description</button>
+                           </div>
+                           <div id="_yesman" style="display:none;text-align: left;padding: 15px">
+                              Carl Allen (Jim Carrey) is stuck in a rut with his negative ways. Then he goes to a self-help seminar and learns to unleash the power of yes. Living in the affirmative leads him to all sorts of amazing and transforming experiences; he gets a job promotion, and even finds a new romance. But Carl finds that too much of anything, even positive thinking, is not necessarily a good thing.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('yesman').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_ace.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 6.9/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">57%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('ace').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="ace" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/ZGlFA-miRLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_ace)">Description</button>
+                           </div>
+                           <div id="_ace" style="display:none;text-align: left;padding: 15px">
+                              When the dolphin mascot of Miami's NFL team is abducted, Ace Ventura (Jim Carrey), a zany private investigator who specializes in finding missing animals, looks into the case. Soon Miami Dolphins players are kidnapped too, including star player Dan Marino (Dan Marino), making Ace's sleuth work even more pressing. Working with Dolphins representative Melissa Robinson (Courteney Cox), Ace closes in on the culprits, but not before many ridiculous misadventures.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('ace').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_inception.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.8/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">91%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('inception').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="inception" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/8hP9D6kZseM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_inception)">Description</button>
+                           </div>
+                           <div id="_inception" style="display:none;text-align: left;padding: 15px">
+                              Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams and steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves. Cobb gets a chance at redemption when he is offered a seemingly impossible task: Plant an idea in someone's mind. If he succeeds, it will be the perfect crime, but a dangerous enemy anticipates Cobb's every move.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('inception').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_yourname.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.4/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">98%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('yourname').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="yourname" class="modal">
+                     <form class="modal-content animate" style="width: 40%;position: all;top: 0%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/xU47nhruN-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_yourname)">Description</button>
+                           </div>
+                           <div id="_yourname" style="display:none;text-align: left;padding: 15px">
+                             Two teenagers share a profound, magical connection upon discovering they are swapping bodies. But things become even more complicated when the boy and girl decide to meet in person.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('yourname').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_catchmeifyoucan.jepg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.1/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">96%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('youcant').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="youcant" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/xas1UyTiVUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_youcant)">Description</button>
+                           </div>
+                           <div id="_youcant" style="display:none;text-align: left;padding: 15px">
+                              Frank Abagnale, Jr. (Leonardo DiCaprio) worked as a doctor, a lawyer, and as a co-pilot for a major airline -- all before his 18th birthday. A master of deception, he was also a brilliant forger, whose skill gave him his first real claim to fame: At the age of 17, Frank Abagnale, Jr. became the most successful bank robber in the history of the U.S. FBI Agent Carl Hanratty (Tom Hanks) makes it his prime mission to capture Frank and bring him to justice, but Frank is always one step ahead of him.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('youcant').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_princessmonoke.jepg" height="263px" width="98%"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.4/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">94%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('princessmonoke').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="princessmonoke" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/YOuG8m2RqOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_princessmonoke)">Description</button>
+                           </div>
+                           <div id="_princessmonoke" style="display:none;text-align: left;padding: 15px">
+                              In the 14th century, the harmony that humans, animals and gods have enjoyed begins to crumble. The protagonist, young Ashitaka - infected by an animal attack, seeks a cure from the deer-like god Shishigami. In his travels, he sees humans ravaging the earth, bringing down the wrath of wolf god Moro and his human companion Princess Mononoke. Hiskattempts to broker peace between her and the humans brings only conflict.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('princessmonoke').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_groudhog.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 8/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">96%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('groundhog').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="groundhog" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/GncQtURdcE4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_groundhog)">Description</button>
+                           </div>
+                           <div id="_groundhog" style="display:none;text-align: left;padding: 15px">
+                              A cynical TV weatherman finds himself reliving the same day over and over again when he goes on location to the small town of Punxsutawney to film a report about their annual Groundhog Day. His predicament drives him to distraction, until he sees a way of turning the situation to his advantage.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('groundhog').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_predestination.jepg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2"> 7.5/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">83%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('predestination').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="predestination" class="modal" >
+                     <form class="modal-content animate" style="width: 40%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/-FcK_UiVV40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_predestination)">Description</button>
+                           </div>
+                           <div id="_predestination" style="display:none;text-align: left;padding: 15px;">
+                              A temporal agent (Ethan Hawke) embarks on a final time-traveling assignment to prevent an elusive criminal from launching an attack that kills thousands of people.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('predestination').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/movies/poster_wolf.jepg" height="263px" width="98%"></div>
+               <div class="item2">
+                  <p><font size="2"> 8.2/10<br>IMBd</font></p>
+               </div>
+               <div class="item4">
+                  <p><font size="2">89%<br>Rotten tomatoes</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('wolf').style.display='block'" style="width:auto;">Watch</button>
+                  <div id="wolf" class="modal">
+                     <form class="modal-content animate" style="width: 40%">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe width="100%" height="410px" src="https://www.youtube.com/embed/iszwuX1AK6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                              <button type="button" onclick="showHide(_wolf)">Description</button>
+                           </div>
+                           <div id="_wolf" style="display:none;text-align: left;padding: 15px">
+                              In 1987, Jordan Belfort (Leonardo DiCaprio) takes an entry-level job at a Wall Street brokerage firm. By the early 1990s, while still in his 20s, Belfort founds his own firm, Stratton Oakmont. Together with his trusted lieutenant (Jonah Hill) and a merry band of brokers, Belfort makes a huge fortune by defrauding wealthy investors out of millions. However, while Belfort and his cronies partake in a hedonistic brew of sex, drugs and thrills, the SEC and the FBI close in on his empire of excess.
+                           </div>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('wolf').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+</body>
+</html>

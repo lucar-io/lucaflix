@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Books!</title>
+<link href="css/project.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+      body {
+         font-family: Arial, Helvetica, sans-serif;
+  background-image:url("img/moon3.jpg") , linear-gradient(to right, #9eddff,#00a6ff,#0044ff,#6200ff);
+      }
+      .box {
+      width: 100%;
+      height:100%;
+      }
+      .boxx {
+      width: 33.33%;
+      outline: 1px solid;
+      float: left;
+      }
+      .item1 { grid-area: header; }
+      .item2 { grid-area: menu; }
+      .itemTitle { grid-area: title; }
+      .item5 { grid-area: footer; }
+      .grid-container {
+      display: grid;
+      grid-template-areas:
+      'header header header header header header'
+      'menu menu menu menu menu menu'
+      'title title title title title title'
+      'footer footer footer footer footer footer';
+      grid-gap: 1px;
+      background-color: #2196F3;
+      padding: 1px;
+      }
+      .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 1px 1px;
+      }
+      /*Preview button*/
+      button {
+      background-color: #3aa0b0;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .animate {
+      -webkit-animation: animatezoom 1s;
+      animation: animatezoom 1s
+      }
+      .container {
+      padding: 16px; 
+      }
+      .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.7);
+      }
+      .modal-content {
+      background-color: black;
+      margin: auto auto; 
+      border: 1px solid #888;
+      width: 80%;
+      }
+      .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+      }
+      .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #40b3b3;
+      }
+   </style>
+   <script>
+      function showHide(idDiv) {
+      var DivToShow =idDiv;
+         if(DivToShow.style.display=='none') {
+            DivToShow.style.display='block'; 
+         }
+         else {
+               DivToShow.style.display='none';
+            }
+         }
+   </script>
+<body>
+    <ul> <li><a href="library.html">Movies!</a></li>
+          <li><a href="tvshows.html">Tv-Shows!</a></li>
+          <li><a href="books.html">Books!</a></li>
+         <li style="float: right;"><a href="index.html">Home</a></li>
+     </ul>
+   <h1 style="text-align: center;">Books!</h1>
+   <div>
+     <div style="text-align: center;">
+            <hr></font>
+    </div>
+</div>
+    <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_floweroflife.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Drunvalo Melchizedek</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">The Flower Of Life</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('flower').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="flower" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B007YC6G3W&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_6aN1Eb6TVEJVX&hideBuy=true" ></iframe>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('flower').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_thisnowiseternity.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Daniel Mitel</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">This Now is Eternety</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('daniel').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="daniel" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B00M5JQYCW&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_uRN1EbQAQBBRN&hideShare=true" ></iframe><br>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('daniel').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_thealchemist.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Paulo Coelho</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">The Alchemist</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('alchemist').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="alchemist" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B00U6SFUSS&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_bSN1EbCEZ8QK4&hideBuy=true" ></iframe><br>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('alchemist').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_outwittingthedevil.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Napoleon Hill</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">Outwitting The Devil</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('devil').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="devil" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B085DDVQWS&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_RSN1Eb4SZTC12&hideShare=true" ></iframe><br>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('devil').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_thecouragetobedisliked.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Fumitake Koga and Ichiro Kishimi</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">The courage To Be Disliked</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('disliked').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="disliked" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B07GNTR4TX&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_xTN1EbKTQZPE3&hideShare=true" ></iframe><br>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('disliked').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_becomewhatyouare.jpeg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Alan Watts</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">Become What You Are</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('youare').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="youare" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B00LU5H19W&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_6TN1Eb0NKDCZM&hideShare=true" ></iframe><br>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('youare').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_thesubtleartofnotgivingafuck.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Mark Manson</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">The Subtle Art of Not Giving a F</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('art').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="art" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B019MMUA8S&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_xUN1Eb8N2HYTV&hideShare=true" ></iframe><br>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('art').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_becomingsupernatural.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Joe Dispenza</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">Becoming Super Natural</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('natural').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="natural" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B0746RN3G7&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_0UN1EbP3E4W2F&hideShare=true" ></iframe><br>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('natural').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="box">
+         <div class=boxx>
+            <div class="grid-container">
+               <div class="item1"><img src="posters/books/poster_anewearth.jpg" height="263px" width="auto"></div>
+               <div class="item2">
+                  <p><font size="2">Eckhart Tolle</font></p>
+               </div>
+               <div class="itemTitle">
+                  <p><font size="4">A New Earth</font></p>
+               </div>
+               <div class="item5">
+                  <button onclick="document.getElementById('anewearth').style.display='block'" style="width:auto;">Preview</button>
+                  <div id="anewearth" class="modal" >
+                     <form class="modal-content animate" style="width: 30%;">
+                        <div style="background-color: #e3fcea">
+                           <div class="container">
+                              <iframe type="text/html" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.ca/kp/card?asin=B000PC0S5K&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_sVN1EbCZFB4TW&hideShare=true" ></iframe><br>
+                           <div class="container" align="center">
+                              <button type="button" onclick="document.getElementById('anewearth').style.display='none'" class="cancelbtn">Return</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
